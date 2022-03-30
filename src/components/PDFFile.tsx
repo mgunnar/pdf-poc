@@ -1,5 +1,14 @@
 import React from 'react';
-import { Page, Text, Document, Font, StyleSheet } from '@react-pdf/renderer';
+import {
+  Page,
+  Text,
+  Document,
+  Font,
+  StyleSheet,
+  Image,
+  View,
+} from '@react-pdf/renderer';
+import logoDB from './../imgs/logoDB.png';
 import Calibri from './../fonts/calibri.ttf';
 import CalibriBold from './../fonts/calibrib.ttf';
 
@@ -16,12 +25,19 @@ const styles = StyleSheet.create({
     fontSize: 22,
     textAlign: 'center',
     fontFamily: 'Calibri',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   job: {
     fontSize: 9,
     textAlign: 'center',
     fontFamily: 'Calibri',
+  },
+  divImage: {
+    textAlign: 'right',
+  },
+  image: {
+    width: '50%',
+    float: 'right',
   },
   pageNumber: {
     position: 'absolute',
@@ -38,8 +54,12 @@ const PDFFile = () => {
   return (
     <Document>
       <Page style={styles.body}>
-        <Text style={styles.name}>Bruno Machado da Rosa</Text>
-        <Text style={styles.job}>Software Developer Intern</Text>
+        <View style={styles.divImage}>
+          <Text style={styles.name}>Bruno Machado da Rosa</Text>
+          <Text style={styles.job}>Software Developer Intern</Text>
+          <Image style={styles.image} src={logoDB} fixed></Image>
+        </View>
+
         <Text
           style={styles.pageNumber}
           render={({ pageNumber, totalPages }) =>
