@@ -1,5 +1,10 @@
 import React from 'react';
-import { Page, Text, Image, Document, StyleSheet } from '@react-pdf/renderer';
+import { Page, Text, Document, Font, StyleSheet } from '@react-pdf/renderer';
+import Calibri from './../fonts/calibri.ttf';
+import CalibriBold from './../fonts/calibrib.ttf';
+
+Font.register({ family: 'Calibri', src: Calibri });
+Font.register({ family: 'Calibri', src: CalibriBold, fontWeight: 'bold' });
 
 const styles = StyleSheet.create({
   body: {
@@ -7,25 +12,16 @@ const styles = StyleSheet.create({
     paddingBottom: 65,
     paddingHorizontal: 35,
   },
-  title: {
-    fontSize: 24,
+  name: {
+    fontSize: 22,
     textAlign: 'center',
+    fontFamily: 'Calibri',
+    fontWeight: 'bold'
   },
-  text: {
-    margin: 12,
-    fontSize: 14,
-    textAlign: 'justify',
-    fontFamily: 'Times-Roman',
-  },
-  image: {
-    marginVertical: 15,
-    marginHorizontal: 100,
-  },
-  header: {
-    fontSize: 12,
-    marginBottom: 20,
+  job: {
+    fontSize: 9,
     textAlign: 'center',
-    color: 'grey',
+    fontFamily: 'Calibri',
   },
   pageNumber: {
     position: 'absolute',
@@ -42,9 +38,8 @@ const PDFFile = () => {
   return (
     <Document>
       <Page style={styles.body}>
-        <Text style={styles.header} fixed></Text>
-        <Text style={styles.text}>Bruno Machado da Rosa</Text>
-        <Text style={styles.text}>Software Developer Intern</Text>
+        <Text style={styles.name}>Bruno Machado da Rosa</Text>
+        <Text style={styles.job}>Software Developer Intern</Text>
         <Text
           style={styles.pageNumber}
           render={({ pageNumber, totalPages }) =>
