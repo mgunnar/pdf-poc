@@ -1,51 +1,70 @@
-import { StyleSheet } from '@react-pdf/renderer';
+import { StyleSheet, Font } from '@react-pdf/renderer';
+import Calibri from './../fonts/calibri.ttf';
+import CalibriBold from './../fonts/calibrib.ttf';
+
+Font.register({ family: 'Calibri', src: CalibriBold, fontWeight: 'bold' });
 
 export default StyleSheet.create({
   page: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
   },
-  section_right: {
-    margin: 10,
-    padding: 10,
-    paddingTop: 20,
-    width: '75%',
+
+  // Estilização para a seção do topo
+
+  section_top: {
+    width: '100%',
+    height: '10%',
   },
+
+  profile_img: {
+    width: '40px',
+    height: '40px',
+    borderRadius: '15',
+    marginLeft: '30',
+    marginTop: '20',
+    marginBottom: '20',
+  },
+
+  name_text: {
+    fontSize: 22,
+    fontFamily: 'Calibri',
+    fontWeight: 'bold',
+  },
+
   section_left: {
-    width: '25%',
-    height: '100%',
+    width: '10%',
+    height: '90%',
     backgroundColor: '#084c41',
   },
+
+  section_mid: {
+    left: '10%',
+    width: '50%',
+    height: '90%',
+    backgroundColor: 'red',
+  },
+
   profile_container: {
     display: 'flex',
+    flexDirection: 'row',
+  },
+
+  columnContainer: {
+    display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    marginLeft: '10',
     marginTop: '20',
-    marginBottom: '20px',
-    height: '150',
-    fontFamily: 'Helvetica-Bold',
   },
-  name_text: {
-    paddingTop: '10px',
-    paddingBottom: '5px',
-    fontSize: '14px',
-    fontWeight: 900,
-    color: 'white',
-  },
+
   profession_text: {
-    color: '#d1d5db',
-    fontSize: '11px',
+    color: '#181818',
+    fontSize: '9',
   },
-  profile_img: {
-    width: '60px',
-    height: '60px',
-    borderRadius: '90',
-  },
-  profile_line: {
-    marginTop: '10px',
-    width: '10%',
-    height: '1px',
-    backgroundColor: '#FFF',
-    textAlign: 'center',
+
+  imageProfile: {
+    width: '15',
+    paddingBottom: '100',
+    marginLeft: '25',
   },
 });

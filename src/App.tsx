@@ -4,9 +4,9 @@ import Preview from './components/Preview';
 function App() {
   const [profile, setProfile] = useState({
     type: 'Profile',
-    name: 'John Doe',
-    profession: 'Junior Developer',
-    profileImageURL: 'https://i.imgur.com/f6L6Y57.png',
+    name: 'Bruno Machado da Rosa',
+    profession: 'Software Developer Intern',
+    profileImageURL: 'https://media-exp1.licdn.com/dms/image/C4D03AQGQq2gC3SDygg/profile-displayphoto-shrink_800_800/0/1615595647513?e=1654128000&v=beta&t=RQudu0Fp8p3SO7iGLZyIzIPwBhPTmNNkpTM2fyN_Quc',
     display: true,
     about: 'About...',
   })
@@ -25,7 +25,7 @@ function App() {
     >
       <div style={{ width: '50%' }}>
         <div>
-          <label>Name</label>
+          <label>Nome</label>
           <input
             name='name'
             defaultValue={profile.name}
@@ -35,7 +35,7 @@ function App() {
           />
         </div>
         <div>
-          <label>Profession</label>
+          <label>Profissão</label>
           <input
             name='profession'
             defaultValue={profile.profession}
@@ -45,7 +45,7 @@ function App() {
           />
         </div>
         <div>
-          <label>ImageURL</label>
+          <label>URL da imagem</label>
           <input
             name='profileImageURL'
             defaultValue={profile.profileImageURL}
@@ -55,7 +55,7 @@ function App() {
           />
         </div>
         <div>
-          <label>About</label>
+          <label>Sobre</label>
           <input
             name='about'
             defaultValue={profile.about}
