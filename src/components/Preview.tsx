@@ -13,7 +13,7 @@ const Preview = ({ profile }) => {
   return (
     <div style={{ flexGrow: 1 }}>
       <PDFViewer
-        showToolbar={false}
+        showToolbar={true}
         style={{
           width: '100%',
           height: '95%',

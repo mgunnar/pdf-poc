@@ -2,6 +2,7 @@ import { StyleSheet, Font } from '@react-pdf/renderer';
 import Calibri from './../fonts/calibri.ttf';
 import CalibriBold from './../fonts/calibrib.ttf';
 
+Font.register({ family: 'Calibri', src: Calibri });
 Font.register({ family: 'Calibri', src: CalibriBold, fontWeight: 'bold' });
 
 export default StyleSheet.create({
@@ -33,9 +34,10 @@ export default StyleSheet.create({
   },
 
   section_left: {
-    width: '10%',
+    marginLeft: '20',
+    width: '80%',
     height: '90%',
-    backgroundColor: '#084c41',
+    // backgroundColor: "#f5f5f5",
   },
 
   section_mid: {
@@ -64,7 +66,54 @@ export default StyleSheet.create({
 
   imageProfile: {
     width: '15',
-    paddingBottom: '100',
     marginLeft: '25',
+  },
+
+  profileText: {
+    fontSize: '13.5',
+    fontFamily: 'Calibri',
+    fontWeight: 'bold',
+  },
+
+  profileTextProjects: {
+    fontSize: '13.5',
+    fontFamily: 'Calibri',
+    fontWeight: 'bold',
+    marginTop: '20',
+  },
+
+  profileDescription: {
+    fontSize: '10.5',
+    fontFamily: 'Calibri',
+    marginBottom: '20',
+    width: "80%",
+    textAlign: "justify",
+  },
+
+  profileEducation: {
+    fontSize: '10.5',
+    fontFamily: 'Calibri',
+    fontWeight: 'bold',
+  },
+
+  profileDates: {
+    color: "grey",
+    fontSize: '9',
+    fontFamily: 'Calibri',
+    marginBottom: '20',
+  },
+
+  profileProject: {
+    marginTop: '5',
+    fontSize: '11',
+    fontFamily: 'Calibri',
+    fontWeight: 'bold',
+  },
+
+  profileDatesProject: {
+    color: "grey",
+    fontSize: '9',
+    fontFamily: 'Calibri',
+    marginBottom: '5',
   },
 });
