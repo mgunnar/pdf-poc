@@ -1,4 +1,4 @@
-import { View, Text, Image } from '@react-pdf/renderer';
+import { View, Text, Image, Link } from '@react-pdf/renderer';
 import styles from '../styles';
 import imageProfile from './../imgs/perfil.png';
 import imageGraduation from './../imgs/mortarboard.png';
@@ -36,6 +36,11 @@ export const Profile = ({ profile }) => {
       <Text style={styles.profileProject}>{profile.projectName}</Text>
       <Text style={styles.profileDatesProject}>{profile.projectInitialDate} - {profile.projectEndDate}</Text>
       <Text style={styles.profileDescription}>{profile.projectDescription}</Text>
+
+      <Text style={styles.profileTextProjects}>Links</Text>
+      <Link style={styles.link} src="https://github.com/brunomdrrosa">GitHub</Link>
+      <Link style={styles.link} src="https://www.linkedin.com/in/bruno-machado-da-rosa/">LinkedIn</Link>
+      <Link style={styles.link} src="mailto:brunomdr46@gmail.com">brunomdr46@gmail.com</Link>
     </View>
   );
 };

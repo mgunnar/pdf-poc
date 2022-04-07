@@ -37,7 +37,7 @@ export default StyleSheet.create({
     marginLeft: '20',
     width: '80%',
     height: '90%',
-    // backgroundColor: "#f5f5f5",
+    // backgroundColor: "red",
   },
 
   section_mid: {
@@ -116,4 +116,11 @@ export default StyleSheet.create({
     fontFamily: 'Calibri',
     marginBottom: '5',
   },
+
+  link: {
+    color: "#2196f3",
+    textDecoration: "none",
+    fontFamily: 'Calibri',
+    fontSize: '10.5',
+  }
 });

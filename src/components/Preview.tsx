@@ -23,7 +23,7 @@ const Preview = ({ profile }) => {
       </PDFViewer>
       <PDFDownloadLink
         document={<Template profile={profile} />}
-        fileName="somename.pdf"
+        fileName={profile.name + '.pdf'}
       >
         {({ loading }) => (loading ? 'Loading document...' : 'Download now!')}
       </PDFDownloadLink>
