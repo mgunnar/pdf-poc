@@ -54,7 +54,7 @@ function App() {
     >
       <div style={{ width: '50%' }}>
         <div>
-          <h1>CV Builder</h1>
+          <h1>DB CV</h1>
           <h2>Candidate</h2>
           <label>Nome</label>
           <input
